@@ -1,0 +1,246 @@
+<?php
+
+/* Template Name: HomePage */
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package WordPress
+ * @subpackage Twenty_Nineteen
+ * @since 1.0.0
+ */
+
+get_header();
+?>
+
+  
+  <div class="album py-5 bg-light">
+    <div class="container">
+    
+    <div id="spinner" class="hidden"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/spinner.gif" height="50"></div>
+      <div id="show-data" class="row">
+      </div>
+      <div id="jumbopost">
+        <div class="row">
+          <div id="featured-workshop" class="col-left col-md-6">
+            <!--<div class="mr-3 featured-post" style="height:300px; width:100%; background: url(http://localhost/bedrock/web/app/uploads/2019/02/iso.jpg) no-repeat center center; background-size: cover; " alt="ISO 27002 Foundation">
+            <div class="w3-hide"><h5 class="event-title">ISO 27002 Foundation ISO 27002 Foundation ISO 27002 Foundation</h5>
+            <p class="workshop-date">05/26/2018</p>
+            </div>-->
+            
+            
+          </div>
+          <div class="col-md-6">
+            <ul id="workshopList" class="list-unstyled">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+</div>
+</div>
+
+
+<script>
+
+$(document).ready(function () {
+ 
+ // max_date(['2015/02/01', '2015/02/02', '2015/01/03']);
+  $("#spinner").toggleClass("hidden");
+    $.ajax({
+       // url: "./index.php/wp-json/custom/v1/all-posts",
+         url: "./wp-json/wp/v2/workshops?_embed",
+        method: "GET",
+        dataType: 'json',
+        success: function(data) {
+          console.log(data);
+          var html_to_append = '';
+          //addHyphen();
+      //-   var pic = post._embedded["wp:featuredmedia"][0].source_url;
+          $.each(data, function(i, item) {
+        //  var str = item.date.when;
+          var dt = new Date(item.date.when);
+          var mm = dt.getMonth()+1;
+          var dd = dt.getDate();
+          var yy = dt.getFullYear();
+          var hh = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+     //   
+            //var arr = str.split( /(?<=^(.{4})+)(?!$)/ )
+            html_to_append +=
+            '<div class="col-md-4">'+
+            '<div class="card mb-4 box-shadow" style="width: 18rem;">'+
+           
+           // '<div class="card-img-top" alt="Card image cap">'+ item.content.rendered+'</div>'+
+             '<div class="card-img-top"  style=" height:160px; background: url('+item.attachment_url_images +') no-repeat center center; background-size: cover; " alt="Card image cap"></div>'+
+                    '<div class="card-body">'+
+                    '<h5 class="card-title">'+item.title.rendered + '</h5>'+
+                    '<div class="card-text"><p class="workshop-date">'+mm+'/'+dd+'/'+yy+' @'+hh+'</p></div>'+
+                    '<p class="card-text maincast"><label>Instructor: </label> ' +item.date.instructor +'</p>'+
+                    '<a href="'+item.slug+'" class="btn btn-primary">Details</a>'+
+                '</div>'+
+            '</div>'+
+            '</div>';
+          });
+          $("#show-data").html(html_to_append);
+         
+          $("#spinner").toggleClass("hidden");
+
+
+        },
+        error: function() {
+          console.log(data);
+          $("#show-data").html('');
+        }
+      });
+
+
+
+
+
+
+      $.ajax({
+       // url: "./index.php/wp-json/custom/v1/all-posts",
+         url: "./wp-json/wp/v2/workshops?_embed",
+        method: "GET",
+        dataType: 'json',
+        success: function(data) {
+          console.log(data);
+          localStorage.setItem("workshopItems", JSON.stringify(data));
+         var mydata =  JSON.parse(localStorage.getItem("workshopItems"));
+/* */
+          function max_date(all_dates) {
+            var max_dt = all_dates[0],
+            max_dtObj = new Date(all_dates[0]);
+            all_dates.forEach(function(dt, index)
+            {
+              if ( new Date( dt ) > max_dtObj)
+                  {
+                  max_dt = dt;
+                  max_dtObj = new Date(dt);
+                  }
+            });
+          return max_dt;
+            }
+          //console.log(max_date(['2015/02/01', '2015/02/02', '2015/01/03']));
+          var recentWorkshop=max_date(mydata);
+          console.log('latest: ',recentWorkshop);
+          localStorage.setItem('latest', JSON.stringify(recentWorkshop));
+          var latestWrokshop=  JSON.parse(localStorage.getItem('latest'));
+
+          var html_to_append2 = '';
+         
+          //addHyphen();
+          $.each(data, function(i, item) {
+       // var myDate = new Date(item.date);
+      // var myDate =item.date.when;
+          var dt = new Date(item.date.when);
+          var mm = dt.getMonth()+1;
+          var dd = dt.getDate();
+          var yy = dt.getFullYear();
+          var hh = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+     //   console.log(myDate);
+
+      
+
+
+
+            html_to_append2 +=
+                  
+          
+        '<li class="media mb-2">'+
+        '<div class="mr-3s" style=" height:80px; width:100px; background: url('+item.attachment_url_images +') no-repeat center center; background-size: cover; " alt="'+item.title + '"/>'+
+      // '<div style=" height:80px; width:100px; class="card-img-top" alt="Card image cap">'+ item.content.rendered+'</div>'+
+                '<div class="media-body">'+
+                '<h5 class="mt-0 mb-1 list-featured-title">'+item.title.rendered.slice(0, 50) + '...'+'</h5>'+
+                '<label>Date: </label> <span class="workshop-date">'+mm+'/'+dd+'/'+yy+' @'+hh+'</span>'+
+                /*('<div class="card-text"><label>Date: </label> <span class="workshop-date">' +item.date +'</span>'+
+                '<span class="card-text maincast"><label>Instructor: </label> ' +item.instructor +'</span></div>'+*/
+                    '<a href="'+item.slug+'" class="btn btn-dtls btn-primary">Details</a>'+
+                '</div>'+
+        '</li>'
+       
+
+                   });
+                 
+          $("#workshopList").html(html_to_append2);
+
+
+
+          var html_to_append3 = '';
+          var dt = new Date(latestWrokshop.date.when);
+          var mm = dt.getMonth()+1;
+          var dd = dt.getDate();
+          var yy = dt.getFullYear();
+          var hh = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+          html_to_append3 +=
+            '<div class="mr-3 featured-post" style="height:300px; width:100%; background: url('+latestWrokshop.attachment_url_images+') no-repeat center center; background-size: cover; " alt="ISO 27002 Foundation">'+
+            '<div class="w3-hide"><h5 class="event-title">'+latestWrokshop.title.rendered+'</h5>'+
+            '<p class="workshop-date">'+mm+'/'+dd+'/'+yy+' @'+hh+'</p>'+
+            '</div>';           
+            
+              $("#featured-workshop").html(html_to_append3);
+
+         // $("#spinner").toggleClass("hidden");
+         var imageFtrd = $("#workshopList > figure.wp-block-image > img").attr("src");
+      console.log(imageFtrd);
+      if (imageFtrd !==""){
+      // var theimage = $(this);
+       console.log('img', imageFtrd);
+        
+      } else {
+        // Do something if class does not exist
+      }
+
+    
+
+
+        },
+        error: function() {
+          console.log(data);
+          $("#workshopList").html('');
+        }
+      });
+
+   
+
+
+      function addHyphen () {
+          let el=$(".workshop-date")
+    	let ele = el.html();
+        ele = ele.value.split('-').join('');    // Remove dash (-) if mistakenly entered.
+
+        let finalVal = ele.match(/.{1,3}/g).join('-');
+        el.html(finalVal);
+      }
+
+
+      
+});
+var dataTemp=localStorage.getItem('workshopItems');
+
+
+
+
+
+
+
+
+
+var dates = [32, 33, 16, 40];
+
+function mostRecent(date) {
+  return date >= 18;
+}
+
+function myFunction() {
+  console.log( dates.filter(mostRecent));
+}
+
+
+
+</script>
+
