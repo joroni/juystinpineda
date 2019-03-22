@@ -350,6 +350,7 @@ input, select, textarea {
 
 		.row > .col-12 {
 			width: 100%;
+			min-width:100%;
 		}
 
 		.row > .off-12 {
@@ -593,6 +594,7 @@ input, select, textarea {
 
 				.row > .col-12-xlarge {
 					width: 100%;
+					min-width:100%;
 				}
 
 				.row > .off-12-xlarge {
@@ -838,6 +840,7 @@ input, select, textarea {
 
 				.row > .col-12-large {
 					width: 100%;
+					min-width:100%;
 				}
 
 				.row > .off-12-large {
@@ -1083,6 +1086,7 @@ input, select, textarea {
 
 				.row > .col-12-medium {
 					width: 100%;
+					min-width:100%;
 				}
 
 				.row > .off-12-medium {
@@ -1328,6 +1332,7 @@ input, select, textarea {
 
 				.row > .col-12-small {
 					width: 100%;
+					min-width:100%;
 				}
 
 				.row > .off-12-small {
@@ -2485,15 +2490,15 @@ input, select, textarea {
 					padding: 40px 0 0 0;
 				}
 
-					#intro section.first {
-						border-top: 0;
-						padding-top: 0;
-					}
+				
 
 					#intro section p {
 						margin: 0;
 					}
-
+	/* #intro section.first {
+						border-top: 0;
+						padding-top: 0;
+					} */
 				#intro .middle:before, #intro .middle:after {
 					display: none;
 				}
