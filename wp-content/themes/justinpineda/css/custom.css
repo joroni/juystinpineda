@@ -156,6 +156,10 @@ ul.dates .date strong {
     cursor: default;
 }
 
+
+#navPanel a{
+  text-decoration:none;
+}
 .icon.featured:after {
     content: '';
     position: absolute;
@@ -180,9 +184,6 @@ ul.dates .date strong {
 }
 
 
-.slider {
-    overflow-x:hidden;
-}
 #work {
     position: relative;
     background: #252122;
@@ -194,7 +195,7 @@ ul.dates .date strong {
 }
 
 #work p {
-    color:#858484;
+    color:#ddd;
 }
 #work header.major {
     position: relative;
@@ -224,9 +225,9 @@ header.major h2 {
 ul.dates {
     list-style: none;
     padding-left: 0;
-    height: 400px;
+  
     padding-bottom: 40px;
-    overflow-y: auto;
+  
 }
 
 ul.dates li {
@@ -269,7 +270,6 @@ footer {
   }
 /************slide************/
 .slider {
-	overflow-y: hidden;
 	max-height: 500px; /* approximate max height */
 
 	transition-property: all;
@@ -284,8 +284,25 @@ small {
     text-align: center;
     margin: 0 auto;
 }
-@media only screen and (max-width: 980px) {
 
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form select.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+    max-width: 100% !important;
+}
+
+
+   
+#navPanel {
+   
+    background-color: rgba(0,0,0,1);
+    color: #858484;
+    background-image: url(images/bg.png);
+    box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
+
+}
+@media only screen and (max-width: 980px) {
+#intro .row > div:last-child{
+    margin-bottom:60px;
+}
     #header h1 {
         position: absolute;
         top: 40px;
@@ -294,4 +311,15 @@ small {
         text-align: center;
         width: 100%;
     }
+
+    #work {
+    min-height:800px;
+    padding-bottom:40px;
+    }
+
+    #workshoplist{
+        height:200px;
+        overflow-y:auto;
+    }
+  
 }

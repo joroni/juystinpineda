@@ -107,7 +107,7 @@ echo wp_nav_menu();
                 <header>
                     <p>There are about 4000 cyber attacks out there.</p>
                     <h2>Stay Protected</h2>
-                    <button class="btn btn-register ">Register Now</button>
+                    <button class="btn btn-register"  data-toggle="modal" data-target="#myModal" >Register Now</button>
 
                 </header>
             </section>
@@ -177,7 +177,7 @@ echo wp_nav_menu();
                                 </section>
                             </div>
                             <div class="col-8 col-12-medium">
-                                <section>
+                                <section id="workshoplist">
                                 
                                     <ul class="dates" id="show-data">
                                         
@@ -201,7 +201,7 @@ echo wp_nav_menu();
             <div class="container">
                 <div class="row">
                     
-                    <div class="col-12">
+                    <div class="col-12  pl-0">
 
                         <!-- Articles -->
                         <section id="Articles">
@@ -214,6 +214,9 @@ echo wp_nav_menu();
                               
                                
                             
+                            </div>
+                            <div class="pt-4 pb-4 col-md-12">
+                            <div class="centered"><Button>More...</Button></div>
                             </div>
                         </section>
 
@@ -367,14 +370,38 @@ echo get_stylesheet_directory_uri();
             </div>
         </section>
 
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <?php 
+        echo do_shortcode( '[wpforms id="2100" title="sample"]' );
+        ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
 
 
-        <!-- Scripts -->
+       
     <script src="<?php
 echo get_stylesheet_directory_uri();
 ?>/js/jquery.min.js"></script>
-    <script>
+    <script>  
+
     
     
 
@@ -407,7 +434,9 @@ echo get_stylesheet_directory_uri();
 ?>/js/main.js"></script>
     
     
-        
+     <?php
+get_footer();
+?>
         
        
 

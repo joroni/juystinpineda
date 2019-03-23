@@ -11,10 +11,11 @@ $("#spinner").toggleClass("hidden");
         dataType: 'json',
         success: function(data) {
           console.log(data);
+          var mydata = data.slice(0,6);
           var html_to_append = '';
          
 
-          $.each(data, function(i, item) {
+          $.each(mydata, function(i, item) {
 
             
        
@@ -94,9 +95,6 @@ echo get_stylesheet_directory_uri();
                          
                     });
           $("#show-articles").html(html_to_append);
-          
-
-        
          
           $("#spinner").toggleClass("hidden");
 
