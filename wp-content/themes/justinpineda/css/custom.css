@@ -1,3 +1,10 @@
+body, input, textarea, select {
+    font-family: 'Source Sans Pro' !important;
+    font-weight: 300;
+    color: #5d5d5d;
+   
+}
+
 body {
     background: #fff;
     background-image: none;
@@ -5,6 +12,14 @@ body {
 }
 
 
+.site-featured-image {
+  margin-top:80px;
+  position:relative;
+}
+
+.entry-header h1.entry-title {
+  text-shadow: -1px 2px 5px #000 !important;
+}
 #header, .site-header {
     position: relative;
     background: #ffffff;
@@ -20,6 +35,7 @@ body {
     font-size: 1.5em;
     color: #fff;
 }
+
 
 
 .logo img {
@@ -132,7 +148,9 @@ ul.dropotron li a {
 }
 
 .btn-register {
-    background-color:orangered;
+    background-color:orangered !important;
+  margin-bottom:40px !important;
+  font-weight:600 !important; 
 }
 
 .btn-register:hover, .btn-register:active {
@@ -156,6 +174,10 @@ ul.dates .date strong {
     cursor: default;
 }
 
+div.wpforms-container-full .wpforms-form button[type=submit], button.wpforms-submit{
+   background-color: orangered !important;
+   color:#fff;
+}
 
 #navPanel a{
   text-decoration:none;
@@ -194,6 +216,9 @@ ul.dates .date strong {
     color: #fff;
 }
 
+#work .h2,#work  h2 {
+    font-size: 1.5rem;
+}
 #work p {
     color:#ddd;
 }
@@ -208,6 +233,7 @@ ul.dates .date strong {
 
 #work header.major h2 {
     background: #252122;
+    font-size: 2rem;
 }
 
 header.major h2 {
@@ -243,7 +269,13 @@ ul.dates li {
     color: #858484;
     padding: 4em 0;
 }
-
+.close:hover, .close:active, .close:link {
+   background:#fff !important;
+    color: #000;
+  border:none !important;
+  box-shadow:none !important;
+  
+}
 
 footer {
     margin: 0 0 0 0;
@@ -270,7 +302,7 @@ footer {
   }
 /************slide************/
 .slider {
-	max-height: 500px; /* approximate max height */
+	/*max-height: 500px;  approximate max height */
 
 	transition-property: all;
 	transition-duration: .5s;
@@ -299,10 +331,151 @@ div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms
     box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 
 }
+
+.post-thumbnail img {
+  max-width:100%;
+  height:auto;
+}
+/* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.workshop-date, .workshop-instructor{
+color:#fff;
+}
+
+
+.workshop-button{
+  color:#fff;
+  }
 @media only screen and (max-width: 980px) {
+  #intro {
+    padding: 0em 0 0 0;
+}
 #intro .row > div:last-child{
     margin-bottom:60px;
 }
+  
+  header > h2, header > h3 {
+    font-size: 1.25em;
+}
+  
     #header h1 {
         position: absolute;
         top: 40px;
@@ -313,7 +486,7 @@ div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms
     }
 
     #work {
-    min-height:800px;
+    min-height:950px;
     padding-bottom:40px;
     }
 
@@ -322,4 +495,34 @@ div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms
         overflow-y:auto;
     }
   
+
 }
+@media screen and (max-width: 736px){
+.row > .col-12-small {
+    width: 100%;
+    min-width: 100%;
+  
+}
+  
+  #intro section {
+    padding: 40px 0 0 0;
+    margin: 0px 0 0 0;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 320px){
+
+  #work {
+    min-height: 950px;
+    padding-bottom: 40px;
+}
+  
+  #workshoplist {
+    height: 250px;
+    /* overflow-y: auto; */
+}
+  }

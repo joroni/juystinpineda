@@ -60,5 +60,21 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
-
+      $("article").addClass("box");
+    
+ 
+				
 })(jQuery);
+
+
+$(document).ready(function(){
+  
+   $("#comments").addClass("container");
+  
+  $("input[type='url'],input[type='checkbox']").addClass("form-control");
+})
+/* 
+$(".btn btn-register").on("click", function(){
+	$("#myModalLabel").html("Register Now.");
+})
+ */

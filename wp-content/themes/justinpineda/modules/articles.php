@@ -73,7 +73,7 @@ echo get_stylesheet_directory_uri();
     }
     
     //console.log(TrimMyString(tooHugeToHandle, maxValue))
-            html_to_append +='<div class="col-4 col-6-medium col-12-small">'+
+            html_to_append +='<div class="col-lg-4 col-md-4 col-sm-12">'+
                                     '<section class="box blog-article">'+
                                         '<a href="'+item.link+'" class="image featured">'+
                                         '<div class="artcle-img" style="height: 150px; background: url('+featuredImage+')  no-repeat center center; background-size:cover;"></div></a>'+

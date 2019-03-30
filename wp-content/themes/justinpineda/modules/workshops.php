@@ -12,57 +12,55 @@ $("#spinner").toggleClass("hidden");
         success: function(data) {
           console.log(data);
           var html_to_append = '';
+          var html_to_append2 = '';
+          blogPosts = _.sortBy(data, function(o) { return new moment(o.date.when); }).reverse();
+          console.log('sorted', blogPosts);
+          $.each(blogPosts, function(i, item) {
+    
+          var dttt = item.date.when.toString();
+          var dt = dttt.replace(" ", "T");
+          //var dt = moment(dtt).toDate();
+         // var mm = dt.getMonth()+1;
+          var mm =  moment(dt).format('MMM');
+         // var dd = dt.getDate();
+          var dd = moment(dt).format('do');
+        // var yy = dt.getFullYear();
+          var yy = moment(dt).format('YYYY');
+         // var hh = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+           var hh =moment(dt).format('h:mm a');
+
             
-          $.each(data, function(i, item) {
-       
-          var dt = new Date(item.date.when);
-          var mm = dt.getMonth()+1;
-          var dd = dt.getDate();
-          var yy = dt.getFullYear();
-          var hh = dt.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
-
-        //  var d = new Date();
-          var month = new Array();
-          month[0] = "January";
-          month[1] = "February";
-          month[2] = "March";
-          month[3] = "April";
-          month[4] = "May";
-          month[5] = "June";
-          month[6] = "July";
-          month[7] = "August";
-          month[8] = "September";
-          month[9] = "October";
-          month[10] = "November";
-          month[11] = "December";
-          var n = month[dt.getMonth()];
-
+           
             html_to_append +=
             '<li>'+
-                                            '<span class="date">'+n.substr(0, 3)+' <strong>'+dd+'</strong></span>'+
-                                            '<h3><a href="'+item.slug+'">'+item.title.rendered + '</a></h3>'+
-                                            '<p>' +item.date.instructor +'</p>'+
+            
+          '<span class="date">'+mm+' <strong>'+dd+'</strong></span>'+
+            '<h3><a href="'+item.slug+'">'+item.title.rendered + '</a></h3>'+
+            '<p>' +item.date.instructor +'</p>'+
                                         '</li>';
             
+          $("#show-data").html(html_to_append);
 
-
-                         html_to_append2 ='<header>'+
+            html_to_append2 ='<header>'+
             '<h2>'+item.title.rendered + '</h2>'+
             '</header>'+
             '<a href="'+item.slug+'" class="image featured"><img src="'+item.attachment_url_images +'" alt="" /></a>'+
-            '<p class="workshop-date">'+mm+'/'+dd+'/'+yy+' @'+hh+'</p></div>'+
-            '<p><label>Instructor: </label> ' +item.date.instructor +'</p>';
+            
+           '<div class="row"><div class="workshop-date col-7">'+mm+'. '+dd+', '+yy+' @'+hh+'</p>'+
+           '<p><label>Instructor: </label> ' +item.date.instructor +'</p></div>'+
+           '<div class="workshop-button col-5 text-right"><button class="btn btn-register"><i class="fa fa-pencil-square mr-1" aria-hidden="true"></i>Join this</button></div></div>';
+           
                     });
-          $("#show-data").html(html_to_append);
+         
           $("#show-data2").html(html_to_append2);
          
           $("#spinner").toggleClass("hidden");
-
+        
 
         },
         error: function() {
           $("#show-data").html('');
-                    $("#show-data2").html('');
+          $("#show-data2").html('');
                 
         }
 				
