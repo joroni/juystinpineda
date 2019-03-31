@@ -304,7 +304,7 @@ echo get_stylesheet_directory_uri();
       
         
             <?php 
-            include 'modules/workshops.php' ;
+           // include 'modules/workshops.php' ;
 			include 'modules/articles.php' ;
 include 'modules/workshop_reg.php'; 
 ?>
