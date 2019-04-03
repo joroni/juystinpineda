@@ -1838,18 +1838,18 @@ form input[type=url],
 
 /* Dates */
 
-	ul.dates {
+	ul.dates, .dates {
 		list-style: none;
 		padding-left: 0;
 	}
 
-		ul.dates li {
+		ul.dates li, .dates div{
 			position: relative;
 			border-top: solid 1px #ddd;
 			padding: 1.3em 0 1.3em 6.75em;
 		}
 
-		ul.dates .date {
+		ul.dates .date{
 			display: block;
 			position: absolute;
 			left: 0;
@@ -1864,7 +1864,7 @@ form input[type=url],
 			padding: 0.5em 0.75em 0 1em;
 		}
 
-			ul.dates .date:after {
+			ul.dates .date:after, .dates .date:after {
 				content: '';
 				position: absolute;
 				bottom: 0;
@@ -1874,13 +1874,13 @@ form input[type=url],
 				border-bottom: solid 1.8em transparent;
 			}
 
-			ul.dates .date strong {
+			ul.dates .date strong , .dates .date strong {
 				display: block;
 				font-size: 1.75em;
 				padding-top: 0.15em;
 			}
 
-		ul.dates h3 {
+		ul.dates h3 , .dates h3 {
 			font-size: 1.1em;
 		}
 
@@ -2356,6 +2356,19 @@ form input[type=url],
 			padding: 0.85em 2.25em 0.85em 2.25em;
 		}
 
+
+img.avatar {
+    max-width: auto;
+    min-width: auto;
+    height: auto;
+}
+
+embed, iframe,figure, img, obj, video {
+      max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+}
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
@@ -2642,7 +2655,7 @@ form input[type=url],
 					line-height: 44px;
 					border-top: solid 1px rgba(255, 255, 255, 0.05);
 					padding: 0 1em 0 1em;
-					font-style: normal;
+					font-style: italic;
 				}
 
 					#navPanel .link:first-child {
@@ -2800,11 +2813,11 @@ form input[type=url],
 
 		/* Dates */
 
-			ul.dates li {
+			ul.dates li, .dates div {
 				padding-left: 6em;
 			}
 
-			ul.dates h3 {
+			ul.dates h3, .dates h3 {
 				margin: 0 0 0.5em 0;
 			}
 
@@ -2906,4 +2919,3 @@ form input[type=url],
 
 	}
 	
-

@@ -45,11 +45,9 @@ $("#spinner").toggleClass("hidden");
             '<h2>'+item.title.rendered + '</h2>'+
             '</header>'+
             '<a href="'+item.slug+'" class="image featured"><img src="'+item.attachment_url_images +'" alt="" /></a>'+
-            
-           '<div class="row"><div class="workshop-date col-7">'+mm+'. '+dd+', '+yy+' @'+hh+'</p>'+
-           '<p><label>Instructor: </label> ' +item.date.instructor +'</p></div>'+
-           '<div class="workshop-button col-5 text-right"><button class="btn btn-register"><i class="fa fa-pencil-square mr-1" aria-hidden="true"></i>Join this</button></div></div>';
-           
+           '<p class="workshop-date">'+mm+'/'+dd+'/'+yy+' @'+hh+'</p></div>'+
+            '<p><label>Instructor: </label> ' +item.date.instructor +'</p>'+
+            '<button class="btn btn-register form-control">Register</button>';
                     });
          
           $("#show-data2").html(html_to_append2);

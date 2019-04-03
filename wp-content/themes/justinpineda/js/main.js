@@ -69,7 +69,7 @@
 
 $(document).ready(function(){
   
-   $("#comments").addClass("container");
+   $("#comments, .navigation").addClass("container");
   
   $("input[type='url'],input[type='checkbox']").addClass("form-control");
 })

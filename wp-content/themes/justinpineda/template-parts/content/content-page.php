@@ -13,7 +13,6 @@ get_header();
 include '../modules/workshop_reg.php';
 ?>
 
-content-page
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="box">
 	<?php if ( ! twentynineteen_can_show_post_thumbnail() ) : ?>
 	<header class="entry-header">
@@ -73,3 +72,20 @@ echo get_stylesheet_directory_uri();
 echo get_stylesheet_directory_uri();
 ?>/js/main.js"></script>
     
+<script>
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+  
+  
+  var wsitemval = getUrlVars()["ws-item"];
+  var textValue = document.getElementById("wpforms-2100-field_8");
+  console.log(wsitemval);
+
+   textValue.readOnly = !textValue.readOnly;
+  textValue.value =  decodeURIComponent(wsitemval);
+</script>

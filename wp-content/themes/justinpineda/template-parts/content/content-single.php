@@ -13,7 +13,11 @@ get_header();
 include '../modules/workshop_reg.php';
 
 ?>
-content-single
+<style>
+  .site-featured-images {
+  display:none;
+}</style>
+
 		<div id="page-wrapper">
 
 
@@ -61,10 +65,10 @@ content-single
 							</div>
 							<div class="col-4 col-12-medium">
 
-								<!-- Sidebar-->
+								<!-- Sidebar
 									<section class="box">
-									<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
-									</section> 
+										
+									</section> -->
 
 							</div>
 						</div>

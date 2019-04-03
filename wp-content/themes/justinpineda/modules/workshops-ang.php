@@ -1,39 +1,42 @@
-
 <div id="myApp" ng-app="myApp">
     <div class="row" ng-controller="peopleCtrl">
-        <div class="col-4 col-12-medium">
-            <section id="show-data2" ng-repeat="item in myVMdata  | filter:searchText | filter:theFilter | limitTo : 1"><header><h2>{{item.title.rendered}}</h2></header>
-                <a href="text-content-hacking" class="image featured"><img src="{{item.attachment_url_images}}" alt=""></a>
-                  <div class="row">
-                      <div class="workshop-date col-7">
-                        <p>{{ item.date.when[0].replace(" ","T")| date :  "MMM" }}. {{ item.date.when[0].replace(" ","T")| date :  "dd" }}, {{ item.date.when[0].replace(" ","T")| date :  "yyyy" }} @{{ item.date.when[0].replace(" ","T")| date :  "hh" }}:{{ item.date.when[0].replace(" ","T")| date :  "mm" }}</p>
-                        <p><label>Instructor: </label> Justin Pineda</p>
-                       </div>
-                      <div class="workshop-button col-5 text-right">
-                        <button class="btn btn-register"><i class="fa fa-pencil-square mr-1" aria-hidden="true"></i>Join this</button>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="workshop-content col-12">
-                      {{item.content.rendered | removeHTMLTags }}
-</div>
-</div>
-            </section>
-        </div>
-        <div class="col-8 col-12-medium">
-            <section id="workshoplist">
-                <ul class=" dates"  id="show-data">
-                  <li ng-repeat="v in myVMdata | filter:searchText" ng-click="getID(v.title.rendered)" ng-selected="v == myVMdata.value" ng-model="theFilter" class="item-link">
-                <span class="date">{{ v.date.when[0].replace(" ","T")| date :  "MMM" }} <strong>{{ v.date.when[0].replace(" ","T")| date :  "dd" }}</strong></span>
-                  <h3><a href="#0">{{ v.title.rendered }}</a></h3>
-                  <p>{{ v.date.instructor[0] }}</p>
-                  </li>
-                </ul> 
-            </section>
-        </div>                
-    </div>
-</div>
+<div id="accordion">
 
+  <div class="card" ng-repeat="v in myVMdata | filter:searchText">
+    <div class="card-header" id="heading{{v.id}}">
+      <h5 class="mb-0  dates" data-toggle="collapse" data-target="#collapse{{ v.id }}" aria-expanded="true" aria-controls="collapse{{ v.id }}">
+      <div class="ws date" >{{ v.date.when[0].replace(" ","T")| date :  "MMM" }} <strong>{{ v.date.when[0].replace(" ","T")| date :  "dd" }}</strong></div>
+      <div class="ws title">{{v.title.rendered}}</div>
+      </h5>
+    </div>
+
+
+    <div id="collapse{{v.id}}" ng-class='{show :$first}' class="collapse" aria-labelledby="heading{{v.id}}" data-parent="#accordion">
+      <div class="card-body">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+              <p> {{v.content.rendered | removeHTMLTags }}</p>
+                <div class="workshop-date row">
+                    <div class="ng-binding col-md-6">{{ v.date.when[0].replace(" ","T")| date :  "MMM" }}. {{ v.date.when[0].replace(" ","T")| date :  "dd" }}, {{ v.date.when[0].replace(" ","T")| date :  "yyyy" }} @{{ v.date.when[0].replace(" ","T")| date :  "hh" }}:{{ v.date.when[0].replace(" ","T")| date :  "mm" }}</div>
+                    <div class="ng-binding col-md-6"><label>Instructor: </label>&nbsp;{{v.date.instructor[0] }} </div>
+                
+                </div>       
+            </div>
+              <div class="col-md-5 col-sm-12">
+                <img src="{{v.attachment_url_images}}" alt="">
+                <div class="mt-4">
+                  <input type="hidden" value="{{ v.title.rendered }}" class="select-val" />
+                 <button class="btn btn-register" id="btn{{v.id}}" value="{{ v.title.rendered }}" onclick="wsItem(this);"><i class="fa fa-pencil-square mr-1" aria-hidden="true"></i>Register</button>
+                    </div>
+              </div>  
+         </div>
+      </div>
+   </div>
+  
+
+</div>
+</div>
+</div>
 
   <!--/.container-->
   <!-- /container -->
@@ -74,13 +77,14 @@ app.filter('removeHTMLTags', function() {
 		return  text ? String(text).replace(/<[^>]+>/gm, '') : '';
 	};
 });
+    
 app.controller('peopleCtrl', function($scope, $http) {
-  $http.get("<?php echo get_stylesheet_directory_uri();?>/js/user.json").then(function(response) {
+ /* $http.get("<?php echo get_stylesheet_directory_uri();?>/js/user.json").then(function(response) {
     $scope.mockUserData = response.data.User;
     $scope.username = function(val) {
       console.log(val);
-    };   
-  })
+    };  
+  })*/
 
   
   $http.get("<?php echo esc_url( home_url( '/' ) ); ?>/wp-json/wp/v2/workshops?_embed").then(function(response) {
@@ -131,6 +135,13 @@ app.controller('peopleCtrl', function($scope, $http) {
   });
 
 });
-  </script>
+ var theBtn =document.querySelector(".show .btn-register");
+    function wsItem(theBtn){
+      var selectedWS = theBtn.value;
+    //  alert(theBtn.value);
+      window.location = "./register?ws-item="+selectedWS;
+      
+    }
+</script>
 </div>
 

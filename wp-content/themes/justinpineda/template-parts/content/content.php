@@ -10,7 +10,7 @@
  */
 
 ?>
-content
+
 <article id="post-<?php the_ID(); ?>" class="box <?php post_class(); ?>">
 	<header class="entry-header">
 		<?php
