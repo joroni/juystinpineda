@@ -519,6 +519,13 @@ h5.dates:hover{
   border:none;
   }
 
+  .truncate {
+    width: 950px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .ws.title {
     color:rgba(247, 242, 242,1);
     position: absolute;
@@ -570,6 +577,14 @@ line-height:1rem;
         height:200px;
         overflow-y:auto;
     }
+    
+.truncate {
+  width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  
   
 
 }
@@ -578,6 +593,13 @@ line-height:1rem;
     width: 100%;
     min-width: 100%;
   
+}
+
+.truncate {
+  width: 420px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
   
   #intro section {
@@ -600,5 +622,13 @@ line-height:1rem;
   #workshoplist {
     height: 250px;
     /* overflow-y: auto; */
+}
+
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
   }

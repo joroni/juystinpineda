@@ -6,7 +6,7 @@
     <div class="card-header" id="heading{{v.id}}">
       <h5 class="mb-0  dates" data-toggle="collapse" data-target="#collapse{{ v.id }}" aria-expanded="true" aria-controls="collapse{{ v.id }}">
       <div class="ws date" >{{ v.date.when[0].replace(" ","T")| date :  "MMM" }} <strong>{{ v.date.when[0].replace(" ","T")| date :  "dd" }}</strong></div>
-      <div class="ws title">{{v.title.rendered}}</div>
+      <div class="ws title truncate">{{v.title.rendered}}</div>
       </h5>
     </div>
 
@@ -15,6 +15,7 @@
       <div class="card-body">
         <div class="row">
             <div class="col-md-7 col-sm-12">
+              <h3>{{v.title.rendered}}</h3>
               <p> {{v.content.rendered | removeHTMLTags }}</p>
                 <div class="workshop-date row">
                     <div class="ng-binding col-md-6">{{ v.date.when[0].replace(" ","T")| date :  "MMM" }}. {{ v.date.when[0].replace(" ","T")| date :  "dd" }}, {{ v.date.when[0].replace(" ","T")| date :  "yyyy" }} @{{ v.date.when[0].replace(" ","T")| date :  "hh" }}:{{ v.date.when[0].replace(" ","T")| date :  "mm" }}</div>
