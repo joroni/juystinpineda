@@ -6,15 +6,15 @@
 $(document).ready(function () {
 $("#spinner").toggleClass("hidden");
     $.ajax({
-         url: "./wp-json/wp/v2/posts?categories=8",
+         url: "./wp-json/wp/v2/posts?categories=111?page=2",
         method: "GET",
         dataType: 'json',
         success: function(data) {
           console.log(data);
-          var mydata = data.slice(0,6);
+          var mydata = data;
           var html_to_append = '';
          
-
+       
           $.each(mydata, function(i, item) {
 
             
@@ -46,7 +46,7 @@ $("#spinner").toggleClass("hidden");
 let tooHugeToHandle = item.content.rendered.replace(/(<([^>]+)>)/ig,"");
     
     //Trim Max Length
-     const maxValue = 200
+     const maxValue = 400
     // The barber.
      const TrimMyString = (string, maxLength, start = 0) => {
     //Note - `start` is if I want to start after some point of the string
@@ -71,39 +71,30 @@ echo get_stylesheet_directory_uri();
     }else{
       featuredImage  = item.featured_image;
     }
-
     
-    
-    //console.log(TrimMyString(tooHugeToHandle, maxValue))
+   
             html_to_append +='<div class="col-lg-4 col-md-4 col-sm-12">'+
                                     '<section class="box blog-article">'+
-                                        '<a href="'+item.link+'" class="image featured">'+
-                                        '<div class="artcle-img" style="height: 150px; background: url('+featuredImage+')  no-repeat center center; background-size:cover;"></div></a>'+
-                                      //  <img src="'+featuredImage+ '" alt="" /></a>'+
+                                   
                                         '<header>'+
-                                            '<h3>'+TrimMyString(item.title.rendered ,40)+ '</h3>'+
+                                            '<h3>'+TrimMyString(item.title.rendered ,200)+ '</h3>'+
                                         '</header>'+
                                         '<p>'+TrimMyString(tooHugeToHandle, maxValue)+ '</p>'+
-                                        '<footer>'+
-                                            '<ul class="actions">'+
-                                                '<li><a href="'+item.link+'" class="button alt">More</a></li>'+
-                                            '</ul>'+
-                                        '</footer>'+
+                                      
                                     '</section>'+
-                                '</div>';
-            
-
-
-                         
+                                '</div>';                     
                     });
-          $("#show-articles").html(html_to_append);
-         
+
+
+
+      $("#show-publications").html(html_to_append);
+    
           $("#spinner").toggleClass("hidden");
 
 
         },
         error: function() {
-          $("#show-articles").html('');
+        //  $("#show-publications).html('');
                  
                 
         }

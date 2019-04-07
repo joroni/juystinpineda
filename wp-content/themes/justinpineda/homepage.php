@@ -170,7 +170,7 @@ echo wp_nav_menu();
         </section>
 <section id="work">
     <div class="container">
-        <div class="col-12">
+        <div class="mr-4">
                 <section id="Workshops" class="slider">
                     <header class="major"><h2>Workshops</h2></header>
                   
@@ -254,64 +254,55 @@ echo wp_nav_menu();
                             
                             </div>
                             <div class="pt-4 pb-4 col-md-12">
-                            <div class="centered"><Button>More...</Button></div>
+                            <div class="centered"><a href="./articles" class="btn btn-primary">More Articles...</a></div>
                             </div>
                         </section>
 
                     </div>
                 
-                    <div class="col-12">
+                      <div class="col-12">
 
                         <!-- Publications -->
                         <section id="Publications">
                             <header class="major">
                                 <h2>Publications</h2>
                             </header>
-                            <div class="row">
-                                <div class="col-6 col-12-small">
-                                    <section class="box">
-                                        <a href="#" class="image featured"><img src="<?php
-echo get_stylesheet_directory_uri();
-?>/images/pic08.jpg" alt="" /></a>
-                                        <header>
-                                            <h3>Magna tempus consequat</h3>
-                                            <p>Posted 45 minutes ago</p>
-                                        </header>
-                                        <p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros
-                                            lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae
-                                            mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit.
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                            inceptos lorem ipsum dolor sit amet.</p>
-                                        <footer>
-                                            <ul class="actions">
-                                                <li><a href="#" class="button icon fa-file-text">Continue Reading</a>
-                                                </li>
-                                                <li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
-                                            </ul>
-                                        </footer>
-                                    </section>
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <section class="box">
-                                        <a href="#" class="image featured"><img src="<?php
-echo get_stylesheet_directory_uri();
-?>/images/pic09.jpg" alt="" /></a>
-                                        <header>
-                                            <h3>Aptent veroeros aliquam</h3>
-                                            <p>Posted 45 minutes ago</p>
-                                        </header>
-                                        <p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros
-                                            lorem et blandit adipiscing feugiat phasellus tempus hendrerit, tortor vitae
-                                            mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit.
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                                            inceptos lorem ipsum dolor sit amet.</p>
-                                        <footer>
-                                            <ul class="actions">
-                                                <li><a href="#" class="button icon fa-file-text">Continue Reading</a>
-                                                </li>
-                                                <li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
-                                            </ul>
-                                        </footer>
+                            <div id="show-publications"  class="row">
+                            <div class="carousel responsive">
+				<div class="carousel-container">
+					<div class="carousel-wrapper slider">
+						<div class="slide carousel-element">
+							<p><span class="t1">News 1</span> <span class="t2">It's great!</span></p>
+						</div>
+						<div class="slide carousel-element">
+							<p><span class="t1">News 2</span> <span class="t2">It's great!</span></p>
+							</p>
+						</div>
+						<div class="slide carousel-element">
+							<p><span class="t1">News 3</span> <span class="t2">It's great!</span></p>
+						</div>
+						<div class="slide carousel-element">
+							<p><span class="t1">News 4</span> <span class="t2">It's great!</span></p>
+						</div>
+						<div class="slide carousel-element">
+							<p><span class="t1">News 5</span> <span class="t2">It's great!</span></p>
+						</div>
+						<div class="slide carousel-element">
+							<p><span class="t1">News 6</span> <span class="t2">It's great!</span></p>
+						</div>
+						<div class="slide carousel-element">
+							<p><span class="t1">News 7</span> <span class="t2">It's great!</span></p>
+						</div>
+					</div>
+					<!-- Fin Wrapper -->
+	
+				
+				</div>
+				<!-- End Container -->
+			</div>
+                             
+                                  
+                                       
                                     </section>
                                 </div>
                             </div>
@@ -401,7 +392,7 @@ echo get_stylesheet_directory_uri();
                                 
                         
                         </div>
-                        <div class="centered"><small>Template origin: <a href="http://html5up.net">HTML5 UP</a></small></div>
+                    <!--    <div class="centered"><small>Template origin: <a href="http://html5up.net">HTML5 UP</a></small></div>-->
                         
                     </div>
                 </div>
@@ -454,7 +445,8 @@ echo get_stylesheet_directory_uri();
       
         
 			<?php
-			include 'modules/articles.php' ;
+            include 'modules/articles.php' ;
+           // include 'modules/publications.php' ;
 include 'modules/workshop_reg.php'; 
 ?>
     <script src="<?php

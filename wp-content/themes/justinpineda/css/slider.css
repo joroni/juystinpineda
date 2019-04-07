@@ -1,0 +1,206 @@
+@charset "utf-8";
+/*** Global page look ***/
+/*body {
+font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+background-color: #ffffff;
+margin: 0;
+padding: 0;
+color: #000;
+width: 100%;
+margin: 0 auto;
+}
+ul, ol, dl {
+padding: 0;
+margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+margin-top: 0;
+padding-right: 15px;
+padding-left: 0;
+text-align: left;
+clear: both;
+}
+h1 {
+text-align: center;
+color: #039;
+}
+h2 {
+color: #039;
+border-bottom: 1px solid #039;
+padding-bottom: 4px;
+}
+h3 {
+margin-top: 20px;
+color: #009933;
+}
+h2, h3, h4 {
+text-align: center;
+}
+a img {
+border: none;
+}
+a:link {
+text-decoration: underline;
+}
+a:visited {
+text-decoration: underline;
+}
+a:hover, a:active, a:focus {
+text-decoration: none;
+}
+.clearfloat {
+height: 0;
+font-size: 1px;
+line-height: 0px;
+width: 100%;
+display: block;
+float: none;
+clear: both;
+padding-bottom: 20px;
+}
+pre {
+width: 400px;
+margin: 0 auto;
+padding: 8px;
+border: 1px black dashed;
+}
+.demo {
+width: 80%;
+margin: 0 auto;
+display: block;
+}*/
+/*** Carousel-related styles ***/
+/* Containers */
+.carousel {
+display: block;
+overflow: hidden;
+position: relative;
+width: 400px;
+margin: 10px auto;
+}
+.carousel-container {
+border: 1px solid #cccccc;
+margin: 20px 40px;
+display: block;
+overflow: hidden;
+width: 99%;
+margin: 0 auto;
+}
+.carousel-wrapper, .carousel-wrapper2 {
+clear: both;
+height: auto;
+overflow: hidden;
+margin: 0;
+}
+.carousel-element {
+width: 100%;
+height: 150px;
+float: left;
+margin: 0;
+padding: 0;
+border: 1px;
+}
+/* Text */
+.infos {
+background: #e5e5e5;
+display: block;
+padding: 4px;
+}
+.infos p {
+margin: 0;
+padding: 2px !important;
+text-align: center;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 10px;
+}
+.infos p a {
+text-decoration: underline;
+color: #e16f00;
+text-transform: lowercase;
+}
+.carousel-element span.t1 {
+color: #53b9ff;
+font-size: 24px;
+font-family: Georgia;
+text-transform: uppercase;
+}
+.carousel-element span.t2 {
+color: #0b7cc3;
+font-size: 28px;
+font-family: Georgia;
+text-transform: uppercase;
+}
+.carousel-element span.t3 {
+color: #e37a00;
+font-size: 20px;
+font-family: Verdana;
+}
+.carousel-element span.t3 span {
+font-size: 28px;
+font-weight: bold;
+}
+.carousel-element span.t1, .carousel-element span.t2, .carousel-element span.t3 {
+display: block;
+text-align: center;
+line-height: 34px;
+}
+/* Prev/Next nav */
+.carousel-nav, .carousel-index {
+display: block;
+margin: 0 auto;
+}
+.carousel-nav {
+position: absolute;
+margin-top: -40px;
+width: 100%;
+clear: both;
+float: left;
+}
+.carousel-nav .precedent {
+float: left;
+display: block;
+margin-left: 15px;
+margin-top: 0;
+color: #000;
+}
+.carousel-nav .suivant {
+float: right;
+display: block;
+margin-right: 15px;
+margin-top: 0;
+color: #000;
+}
+/* Numbered nav */
+.carousel-index {
+display: block;
+margin: 0 auto;
+width: 100%;
+}
+.carousel-index a {
+display: block;
+padding: 5px;
+text-align: center;
+float: left;
+text-decoration: none;
+margin: 3px;
+background-color: #000;
+color: #fff;
+border: 1px solid white;
+width: 18px;
+}
+.carousel-index a:hover, .carousel-index a.clic {
+display: block;
+padding: 5px;
+text-align: center;
+float: left;
+text-decoration: none;
+margin: 3px;
+background-color: #fff;
+color: #000;
+border: 1px solid black;
+}
+/* Responsive slider */
+.responsive {
+width: 80% !important;
+}
