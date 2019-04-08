@@ -1,3 +1,4 @@
+/* @import "jquery.owlcarousel.css"; */
 html {
   scroll-behavior: smooth;
 }
@@ -328,12 +329,47 @@ footer {
     background: #555; 
   } */
 
-  .cvf_pag_loading {padding: 20px;}
-.cvf-universal-pagination ul {margin: 0; padding: 0;}
-.cvf-universal-pagination ul li {display: inline; margin: 3px; padding: 4px 8px; background: #FFF; color: black; }
-.cvf-universal-pagination ul li.active:hover {cursor: pointer; background: #1E8CBE; color: white; }
-.cvf-universal-pagination ul li.inactive {background: #7E7E7E;}
-.cvf-universal-pagination ul li.selected {background: #1E8CBE; color: white;}
+  .latest-blog-posts {
+    position: relative;
+  }
+  .latest-blog-posts .container-fluid {
+      padding: 0px;
+      position: relative;
+      max-width: 1140px;
+      overflow:hidden;
+    }
+    .latest-blog-posts .thumbnail {
+      margin: 0 15px;
+    }
+    .latest-blog-posts .customNavigation {
+      transform: translateY(-50%);
+      top: calc(50% - 37px);
+      position: absolute;
+      width: 100%;
+      left: 0;
+    }
+    .owl-item {
+      float: left;
+  }
+     .latest-blog-posts .customNavigation > span {
+      transform: translateY(-50%);
+      top: 50%;
+      position: absolute;
+    }
+    .latest-blog-posts .pager-left {
+      left: calc(0% + 15px);
+    }
+    .latest-blog-posts .pager-right {
+      right: calc(0% + 15px);
+    }
+    
+   .latest-blog-posts .next,
+    .latest-blog-posts .prev {
+      font-size: 28px;
+      color: #ccc;
+    }
+  
+  
 /************slide************/
 .slider {
 	/*max-height: 500px;  approximate max height */

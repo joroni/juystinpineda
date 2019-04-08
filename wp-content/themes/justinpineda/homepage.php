@@ -260,52 +260,168 @@ echo wp_nav_menu();
 
                     </div>
                 
-                      <div class="col-12">
+                    <div class="col-12">
 
                         <!-- Publications -->
                         <section id="Publications">
+                            
                             <header class="major">
                                 <h2>Publications</h2>
                             </header>
-                            <div id="show-publications"  class="row">
-                            <div class="carousel responsive">
-				<div class="carousel-container">
-					<div class="carousel-wrapper slider">
-						<div class="slide carousel-element">
-							<p><span class="t1">News 1</span> <span class="t2">It's great!</span></p>
-						</div>
-						<div class="slide carousel-element">
-							<p><span class="t1">News 2</span> <span class="t2">It's great!</span></p>
-							</p>
-						</div>
-						<div class="slide carousel-element">
-							<p><span class="t1">News 3</span> <span class="t2">It's great!</span></p>
-						</div>
-						<div class="slide carousel-element">
-							<p><span class="t1">News 4</span> <span class="t2">It's great!</span></p>
-						</div>
-						<div class="slide carousel-element">
-							<p><span class="t1">News 5</span> <span class="t2">It's great!</span></p>
-						</div>
-						<div class="slide carousel-element">
-							<p><span class="t1">News 6</span> <span class="t2">It's great!</span></p>
-						</div>
-						<div class="slide carousel-element">
-							<p><span class="t1">News 7</span> <span class="t2">It's great!</span></p>
-						</div>
-					</div>
-					<!-- Fin Wrapper -->
-	
+                         
+                                
+                            <div id="show-publications">
+
+                            <section class="latest-blog-posts bg-whites pt60 pb60">
+	<div class="container-fluid">
+		<div id="owl-demo-2" class="owl-carousel owl-theme">
 				
+        <article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
 				</div>
-				<!-- End Container -->
-			</div>
-                             
-                                  
-                                       
-                                    </section>
-                                </div>
+            </article>
+            
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+            </article>
+            
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+            </article>
+            
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+            </article>
+            
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+            </article>
+            
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+            </article>
+            
+
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+            </article>
+            
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+            </article>
+            
+            	
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+			</article>
+			
+			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
+				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
+					<img src="http://placehold.it/500x250" class="img-responsive" />
+				</a> -->
+				<div class="caption">
+					<h4 itemprop="headline">
+            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
+          </h4>
+					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
+				</div>
+			</article>
+		</div><!-- #owl-demo-2 -->	
+<div class="customNavigation">
+		<span class="pager-left"><a class="btn btn-link prev"><span class="fa fa-chevron-left"></span></a></span>
+		<span class="pager-right"><a class="btn btn-link next"><span class="fa fa-chevron-right"></span></a></span>
+	</div>	
+	</div><!-- .container -->
+
+</section>
+          <?php
+         //  include 'modules/publications_ang.php' ; 
+          ?>
+		
+
+             
                             </div>
+
+                         
+        
                         </section>
 
                     </div>
@@ -446,8 +562,8 @@ echo get_stylesheet_directory_uri();
         
 			<?php
             include 'modules/articles.php' ;
-           // include 'modules/publications.php' ;
-include 'modules/workshop_reg.php'; 
+  //  include 'modules/publications.php' ;
+//include 'modules/workshop_ang.php'; 
 ?>
     <script src="<?php
 echo get_stylesheet_directory_uri();
