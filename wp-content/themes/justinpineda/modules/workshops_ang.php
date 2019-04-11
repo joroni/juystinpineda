@@ -1,4 +1,4 @@
-<div id="myApp" ng-app="myApp">
+<!-- <div id="myApp" ng-app="myApp"> -->
     <div class="row" ng-controller="peopleCtrl">
 <div id="accordion">
 
@@ -37,7 +37,12 @@
 
 </div>
 </div>
-</div>
+<!-- </div>
+
+
+<div ng-app="myApp"> -->
+ 
+<!-- </div> -->
 
   <!--/.container-->
   <!-- /container -->
@@ -78,7 +83,16 @@ app.filter('removeHTMLTags', function() {
 		return  text ? String(text).replace(/<[^>]+>/gm, '') : '';
 	};
 });
-    
+app.controller('pubCtrl', function($scope, $http) {
+        $http.get("<?php echo esc_url( home_url( '/' ) ); ?>/wp-json/wp/v2/posts?categories=111").then(function(response) {
+            $scope.myData2 = response.data;
+            localStorage.setItem('publications', JSON.stringify($scope.myData2));
+            var vmdata2 = JSON.parse(localStorage.getItem('publications'));
+            console.log('vmdata2', vmdata2);
+          // console.log('date', vmdata.date);
+            $scope.myVMdata2 = vmdata2;
+        });
+      });
 app.controller('peopleCtrl', function($scope, $http) {
  /* $http.get("<?php echo get_stylesheet_directory_uri();?>/js/user.json").then(function(response) {
     $scope.mockUserData = response.data.User;

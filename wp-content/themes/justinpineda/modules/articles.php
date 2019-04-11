@@ -71,8 +71,6 @@ echo get_stylesheet_directory_uri();
     }else{
       featuredImage  = item.featured_image;
     }
-
-    
     
     //console.log(TrimMyString(tooHugeToHandle, maxValue))
             html_to_append +='<div class="col-lg-4 col-md-4 col-sm-12">'+
@@ -86,7 +84,7 @@ echo get_stylesheet_directory_uri();
                                         '<p>'+TrimMyString(tooHugeToHandle, maxValue)+ '</p>'+
                                         '<footer>'+
                                             '<ul class="actions">'+
-                                                '<li><a href="'+item.link+'" class="button alt">More</a></li>'+
+                                                '<li><a href="'+item.link+'" class="button alt">Find out more</a></li>'+
                                             '</ul>'+
                                         '</footer>'+
                                     '</section>'+

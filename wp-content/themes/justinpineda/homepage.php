@@ -68,46 +68,7 @@ echo get_stylesheet_directory_uri();
 <div id="spinner" class="loading hidden">Loading&#8230;</div>
     <div id="page-wrapper">
 
-        <!-- Header --
-        <section id="header" class="container">
-
-            </!-- Logo --
-            <h1 class="logo"><a href="index.html"><img src="<?php
-echo get_stylesheet_directory_uri();
-?>/images/logo.svg"></a></h1>
-
-            </!-- Nav --
-            <nav id="nav">
-                <?php
-echo wp_nav_menu();
-?>
-               </!--<ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li>
-                        <a href="#">Academe</a>
-                        <ul>
-                            <li><a href="#">Lorem ipsum dolor</a></li>
-                            <li><a href="#">Magna phasellus</a></li>
-                            <li><a href="#">Etiam dolore nisl</a></li>
-                            <li>
-                                <a href="#">Phasellus consequat</a>
-                                <ul>
-                                    <li><a href="#">Magna phasellus</a></li>
-                                    <li><a href="#">Etiam dolore nisl</a></li>
-                                    <li><a href="#">Veroeros feugiat</a></li>
-                                    <li><a href="#">Nisl sed aliquam</a></li>
-                                    <li><a href="#">Dolore adipiscing</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li><a href="#">Cyber Security</a></li>
-                    <li><a href="#">Personal</a></li>
-                    <li><a href="#">Workshops</a></li>
-                    <li><a href="#">C.V.</a></li>
-                </ul>
-            </nav>-->
+      
 
             <!-- Banner -->
             <section id="banner">
@@ -168,6 +129,8 @@ echo wp_nav_menu();
             </section>
 
         </section>
+
+        <div id="myApp" ng-app="myApp">
 <section id="work">
     <div class="container">
         <div class="mr-4">
@@ -176,64 +139,46 @@ echo wp_nav_menu();
                   
                         <div class="row">
                             <div class="col-12 col-12-medium">
-                            <?php include 'modules/workshops-ang.php';?>
-                               <!-- <section id="show-data2">
-                                  
-                                 <footer>
-                                        <ul class="actions">
-                                            <li><a href="#" class="button">Find out more</a></li>
-                                        </ul>
-                                    </footer> 
-                                </section>-->
-                            </div>
-                            <!-- <div class="col-8 col-12-medium">
-                                <section id="workshoplist">
-                                
-                                    <ul class="dates" id="show-data">
-                                        
-                                    
-                                    </ul>
-                                </section>
-                            </div>
- -->
-
+                            <?php include 'modules/workshops_ang.php';?>
+                            
+                          </div>
 
                         </div>
 
 
 
-                       <!--  <div class="row">
-                            <div class="col-4 col-12-medium">
-                          
-                               <section id="show-data2">
-                                  
-                                 <footer>
-                                        <ul class="actions">
-                                            <li><a href="#" class="button">Find out more</a></li>
-                                        </ul>
-                                    </footer> 
-                                </section>
-                            </div>
-                            <div class="col-8 col-12-medium">
-                                <section id="workshoplist">
-                                
-                                    <ul class="dates" id="show-data">
-                                        
-                                    
-                                    </ul>
-                                </section>
-                            </div>
-
-
-
-                        </div> -->
+                      
                     
                 </section>
 
             </div>
         </div>
 
+        </section>
+      
+
+<!-- Publications -->
+<section id="Publications">
+    <div class="container">
+     <div class="row">
+                    
+                    <div class="col-12">
+
+    <header class="major">
+        <h2>Publications</h2>
+    </header>
+ 
+        
+    <div id="show-publications">
+<?php include 'modules/publications_ang.php';?>
+  </div>
+ </div>
+        </div>
+ 
+
+ </div>
 </section>
+</div>
         <!-- Main -->
         <section id="main">
             <div class="container">
@@ -260,260 +205,12 @@ echo wp_nav_menu();
 
                     </div>
                 
-                    <div class="col-12">
+                    
+                </div>
+            </div>
+        </section>
 
-                        <!-- Publications -->
-                        <section id="Publications">
-                            
-                            <header class="major">
-                                <h2>Publications</h2>
-                            </header>
-                         
-                                
-                            <div id="show-publications">
-
-                            <section class="latest-blog-posts bg-whites pt60 pb60">
-	<div class="container-fluid">
-		<div id="owl-demo-2" class="owl-carousel owl-theme">
-				
-        <article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-            </article>
-            
-            	
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-			</article>
-			
-			<article class="thumbnail item" itemscope="" itemtype="http://schema.org/CreativeWork">
-				<!-- <a class="blog-thumb-img" href="/5-ways-baby-boomers-changing-healthcare/" title="">
-					<img src="http://placehold.it/500x250" class="img-responsive" />
-				</a> -->
-				<div class="caption">
-					<h4 itemprop="headline">
-            <a href="#" rel="bookmark">5 Ways Baby Boomers Are Changing Healthcare</a>
-          </h4>
-					<p itemprop="text" class="flex-text text-muted">5 ways baby boomers are changing healthcare Starting in 2011, 3 million baby boomers each year reach retirement age....</p>
-				</div>
-			</article>
-		</div><!-- #owl-demo-2 -->	
-<div class="customNavigation">
-		<span class="pager-left"><a class="btn btn-link prev"><span class="fa fa-chevron-left"></span></a></span>
-		<span class="pager-right"><a class="btn btn-link next"><span class="fa fa-chevron-right"></span></a></span>
-	</div>	
-	</div><!-- .container -->
-
-</section>
-          <?php
-         //  include 'modules/publications_ang.php' ; 
-          ?>
-		
-
-             
-                            </div>
-
-                         
         
-                        </section>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <section id="footer">
-            <div class="container">
-                <div class="row">
-                
-
-                    <div class="col-4 col-6-medium col-12-small">
-                        <section>
-                            <header>
-                                <h2>Tempus consequat</h2>
-                            </header>
-                            <ul class="divided">
-                                <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                                <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                                <li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-                                <li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-                                <li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-                                <li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="col-4 col-6-medium col-12-small">
-                        <section>
-                            <header>
-                                <h2>Ipsum et phasellus</h2>
-                            </header>
-                            <ul class="divided">
-                                <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                                <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                                <li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-                                <li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-                                <li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-                                <li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <section>
-                            <header>
-                                <h2>Vitae tempor lorem</h2>
-                            </header>
-                            <ul class="social">
-                                <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
-                                <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-                                <li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-                                <li><a class="icon fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
-                                <li><a class="icon fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
-                            </ul>
-                            <ul class="contact">
-                                <li>
-                                    <h3>Address</h3>
-                                    <p>
-                                        Untitled Incorporated<br />
-                                        1234 Somewhere Road Suite<br />
-                                        Nashville, TN 00000-0000
-                                    </p>
-                                </li>
-                                <li>
-                                    <h3>Mail</h3>
-                                    <p><a href="#">someone@untitled.tld</a></p>
-                                </li>
-                                <li>
-                                    <h3>Phone</h3>
-                                    <p>(800) 000-0000</p>
-                                </li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="col-12">
-
-                        <!-- Copyright -->
-                        <div id="copyright">
-                            <ul class="links">
-                                <li>&copy; Pineda Cyber Security. All rights reserved.</li>
-                                
-                            </ul>
-                                
-                        
-                        </div>
-                    <!--    <div class="centered"><small>Template origin: <a href="http://html5up.net">HTML5 UP</a></small></div>-->
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css">
 
 <!-- Modal -->

@@ -167,7 +167,7 @@ color: #000;
 .carousel-nav .suivant {
 float: right;
 display: block;
-margin-right: 15px;
+margin-right: 50px;
 margin-top: 0;
 color: #000;
 }
@@ -202,5 +202,5 @@ border: 1px solid black;
 }
 /* Responsive slider */
 .responsive {
-width: 80% !important;
+width: 100% !important;
 }

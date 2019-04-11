@@ -61,17 +61,21 @@ echo get_stylesheet_directory_uri();
 
 
 
-<body class="articles is-preload">
+<body class="homepage is-preload">
 <!--<div id="spinner" class="hidden"><img src="<?php
 echo get_stylesheet_directory_uri();
 ?>/images/spinner.gif" height="50"></div>-->
 <div id="spinner" class="loading hidden">Loading&#8230;</div>
     <div id="page-wrapper">
 
-      
+     
+          
              
-           
+            <!-- Banner -->
+      
 
+            <!-- Intro -->
+         
         </section>
 
         <!-- Main -->
